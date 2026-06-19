@@ -1,34 +1,26 @@
 @import "tailwindcss";
 
-/* Monochrome Design System - Polygon-inspired */
+/* Vibrant Gradient Design System - Polygon-inspired */
 :root {
-  /* Primary Colors - Pure Black & White */
-  --color-black: #000000;
+  /* Gradient Colors */
+  --color-blue-dark: #0a0f3c;
+  --color-blue: #1d47e0;
+  --color-purple: #8b5cf6;
+  --color-pink: #ec4899;
+  --color-orange: #f97316;
+  --color-cyan: #06b6d4;
   --color-white: #ffffff;
   
-  /* Neutrals */
-  --color-gray-950: #0a0a0a;
-  --color-gray-900: #111111;
-  --color-gray-800: #1a1a1a;
-  --color-gray-700: #2d2d2d;
-  --color-gray-600: #404040;
-  --color-gray-500: #525252;
-  --color-gray-400: #737373;
-  --color-gray-300: #a3a3a3;
-  --color-gray-200: #d4d4d4;
-  --color-gray-100: #e5e5e5;
-  --color-gray-50: #f5f5f5;
-  
   /* Semantic Tokens */
-  --background: var(--color-gray-950);
+  --background: #0a0f3c;
   --foreground: var(--color-white);
-  --surface: var(--color-gray-900);
-  --surface-light: var(--color-gray-800);
-  --border: var(--color-gray-700);
+  --surface: rgba(29, 71, 224, 0.1);
+  --surface-light: rgba(139, 92, 246, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
   --text-primary: var(--color-white);
-  --text-secondary: var(--color-gray-400);
-  --text-tertiary: var(--color-gray-500);
-  --accent: var(--color-white);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --accent: var(--color-cyan);
   
   /* Spacing & Sizing */
   --radius: 0px;
@@ -50,11 +42,13 @@
 
 @layer base {
   * {
-    @apply border-gray-700;
+    @apply border-white/10;
   }
   
   body {
-    @apply bg-gray-950 text-white font-sans antialiased;
+    background: linear-gradient(135deg, #0a0f3c 0%, #1d47e0 25%, #8b5cf6 50%, #ec4899 75%, #f97316 100%);
+    background-attachment: fixed;
+    @apply text-white font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   

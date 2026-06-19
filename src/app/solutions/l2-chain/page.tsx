@@ -2,12 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { Header } from '@/components/Header';
+import { VideoPlayer } from '@/components/VideoPlayer';
+import { ModelShowcase } from '@/components/3d/ModelShowcase';
 import { Footer } from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
+import { videoAssets } from '@/lib/videoAssets';
 
 export default function L2ChainPage() {
   return (
-    <main className="bg-gray-950 text-white min-h-screen">
+    <main className="text-white min-h-screen">
       <Header />
       
       <section className="pt-32 pb-20 px-6">
@@ -29,17 +32,11 @@ export default function L2ChainPage() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-16 p-12 border border-gray-700 bg-gray-900/50 min-h-[400px] flex items-center justify-center"
-          >
-            <div className="text-center">
-              <p className="text-gray-400 text-lg mb-4">3D Architecture Visualization</p>
-              <p className="text-gray-500">Your 3D model video will be displayed here</p>
-            </div>
-          </motion.div>
+          <VideoPlayer
+            src={videoAssets.solutions.l2Chain}
+            title="L2 Chain Architecture"
+            className="mt-16 max-w-4xl aspect-video shadow-2xl"
+          />
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -78,7 +75,14 @@ export default function L2ChainPage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 border-t border-gray-700">
+      <ModelShowcase
+        title="Architecture Gallery"
+        description="Explore different aspects of our L2 chain infrastructure"
+        models={videoAssets.gallery.slice(0, 6)}
+        layout="grid"
+      />
+
+      <section className="py-20 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -90,11 +94,11 @@ export default function L2ChainPage() {
             <h2 className="text-4xl font-bold mb-6">Ready to build?</h2>
             <p className="text-xl text-gray-400 mb-8">Get started with comprehensive documentation and developer tools.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="flex items-center gap-2 px-8 py-4 bg-white text-gray-950 font-semibold hover:bg-gray-100 transition-colors">
+              <button className="flex items-center gap-2 px-8 py-4 bg-white text-blue-900 font-semibold hover:bg-white/90 transition-colors">
                 Start Building
                 <ArrowRight size={18} />
               </button>
-              <button className="flex items-center gap-2 px-8 py-4 border border-gray-700 hover:border-white transition-colors">
+              <button className="flex items-center gap-2 px-8 py-4 border border-white/30 hover:border-white hover:bg-white/10 transition-colors">
                 View Docs
                 <ArrowRight size={18} />
               </button>

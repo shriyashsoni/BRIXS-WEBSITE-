@@ -3,21 +3,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
-import { AnimatedHero3D } from "@/components/3d/AnimatedHero3D";
+import { VideoPlayer } from "@/components/VideoPlayer";
+import { ModelShowcase } from "@/components/3d/ModelShowcase";
 import { StatsBar } from "@/components/StatsBar";
 import { FeatureCards } from "@/components/FeatureCards";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import { videoAssets } from "@/lib/videoAssets";
 
 export default function Home() {
   return (
-    <main className="bg-gray-950 text-white min-h-screen">
+    <main className="text-white min-h-screen">
       {/* Header */}
       <Header />
 
-      {/* 1. HERO SECTION WITH 3D */}
+      {/* 1. HERO SECTION WITH FEATURED VIDEO */}
       <section className="relative pt-32 pb-12 px-6">
-        <div className="absolute inset-0 grid-bg opacity-10" />
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -25,38 +26,85 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center mb-12"
           >
-            <div className="inline-block mb-6 px-4 py-1.5 border border-gray-700 bg-gray-900/50 backdrop-blur-md text-sm text-gray-300 font-medium">
+            <div className="inline-block mb-6 px-4 py-1.5 border border-white/20 bg-white/5 backdrop-blur-md text-sm text-white/80 font-medium">
               Brixs Mainnet is Live ✨
             </div>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-8 leading-tight">
               The Ethereum L2
               <br />
-              <span className="text-gray-400">built for builders</span>
+              <span className="bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">built for builders</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
               High-throughput, zero-gas architecture designed to scale the next billion users.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-950 font-semibold hover:bg-gray-100 transition-colors">
+              <button className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-blue-900 font-semibold hover:bg-white/90 transition-colors">
                 Add to MetaMask
                 <ArrowRight size={18} />
               </button>
-              <button className="flex items-center justify-center gap-2 px-8 py-4 border border-gray-700 text-white hover:border-white transition-colors">
+              <button className="flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white hover:border-white hover:bg-white/10 transition-colors">
                 Read Docs
                 <ArrowRight size={18} />
               </button>
             </div>
           </motion.div>
 
-          {/* 3D Hero Animation */}
-          <AnimatedHero3D />
+          {/* Featured 3D Model Hero */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mt-16"
+          >
+            <VideoPlayer
+              src={videoAssets.hero[0].video}
+              title={videoAssets.hero[0].title}
+              className="max-w-4xl mx-auto aspect-video shadow-2xl"
+            />
+          </motion.div>
         </div>
       </section>
 
-      {/* 2. STATS BAR */}
+      {/* 2. 3D MODELS GALLERY */}
+      <ModelShowcase
+        title="Architectural Showcase"
+        description="Explore the 3D architecture behind BRIXS L2 chain infrastructure"
+        models={videoAssets.gallery.slice(0, 6)}
+        layout="grid"
+      />
+
+      {/* 3. STATS BAR */}
       <StatsBar />
 
-      {/* 3. FEATURES SECTION */}
+      {/* 4. FEATURED VIDEO WITH FEATURES */}
+      <section className="py-24 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-12 items-center mb-16"
+          >
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
+                Why build on Brixs?
+              </h2>
+              <p className="text-xl text-white/70 mb-8">
+                Institutional-grade infrastructure, minimal complexity.
+              </p>
+              <FeatureCards />
+            </div>
+            <VideoPlayer
+              src={videoAssets.solutions.l2Chain}
+              title="L2 Chain Architecture"
+              className="aspect-square"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 5. FEATURES SECTION */}
       <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
