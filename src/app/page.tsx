@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Fuel, Link as LinkIcon, Code2, Shield, Twitter, MessageSquare, Github } from "lucide-react";
+import AnimatedModel from "@/components/AnimatedModel";
 
 export default function Home() {
   return (
@@ -10,6 +11,15 @@ export default function Home() {
       <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-6 text-center overflow-hidden">
         {/* Abstract Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+
+        {/* Hero 3D Motion Graphic */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none mix-blend-screen overflow-hidden">
+          <AnimatedModel 
+            src="/3d-models/model-1.mp4" 
+            className="w-full max-w-[1200px] h-[800px] scale-150 md:scale-110" 
+            priority={true} 
+          />
+        </div>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -73,20 +83,35 @@ export default function Home() {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group">
-            <Zap className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
-            <h3 className="text-2xl font-bold mb-4">Unmatched Speed</h3>
-            <p className="text-gray-400 leading-relaxed">Fast finality and instant bridging. Experience sub-second block times designed for high-frequency trading and gaming.</p>
+          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group relative overflow-hidden">
+            <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 mix-blend-screen pointer-events-none">
+               <AnimatedModel src="/3d-models/model-2.mp4" className="w-full h-full scale-125" />
+            </div>
+            <div className="relative z-10">
+              <Zap className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Unmatched Speed</h3>
+              <p className="text-gray-400 leading-relaxed">Fast finality and instant bridging. Experience sub-second block times designed for high-frequency trading and gaming.</p>
+            </div>
           </motion.div>
-          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group">
-            <Fuel className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
-            <h3 className="text-2xl font-bold mb-4">Zero Gas Fees</h3>
-            <p className="text-gray-400 leading-relaxed">Native Account Abstraction and Paymasters built into the protocol level. Abstract gas away entirely.</p>
+          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group relative overflow-hidden">
+            <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 mix-blend-screen pointer-events-none">
+               <AnimatedModel src="/3d-models/model-3.mp4" className="w-full h-full scale-125" />
+            </div>
+            <div className="relative z-10">
+              <Fuel className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Zero Gas Fees</h3>
+              <p className="text-gray-400 leading-relaxed">Native Account Abstraction and Paymasters built into the protocol level. Abstract gas away entirely.</p>
+            </div>
           </motion.div>
-          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group">
-            <LinkIcon className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
-            <h3 className="text-2xl font-bold mb-4">Unified Liquidity</h3>
-            <p className="text-gray-400 leading-relaxed">Connects seamlessly with the broader Ethereum ecosystem. Never fracture your userbase's capital.</p>
+          <motion.div whileHover={{ y: -5 }} className="p-8 border border-white/10 bg-white/[0.02] group relative overflow-hidden">
+            <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 mix-blend-screen pointer-events-none">
+               <AnimatedModel src="/3d-models/model-4.mp4" className="w-full h-full scale-125" />
+            </div>
+            <div className="relative z-10">
+              <LinkIcon className="w-12 h-12 mb-6 text-white group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold mb-4">Unified Liquidity</h3>
+              <p className="text-gray-400 leading-relaxed">Connects seamlessly with the broader Ethereum ecosystem. Never fracture your userbase's capital.</p>
+            </div>
           </motion.div>
         </div>
       </section>
