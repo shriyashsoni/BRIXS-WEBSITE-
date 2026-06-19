@@ -1,0 +1,34 @@
+================================================================================
+BRIXS CHAIN - DETAILED UI/UX PLAN: ABOUT (/about)
+================================================================================
+PRIORITY: Good to Have
+DESIGN THEME: Strictly Black & White.
+GOAL: Who built Brixs, why it was built, and the mission. Humanises the project.
+
+1. MISSION STATEMENT HERO
+---------------------------------
+- Headline: "Ethereum for the Next Billion."
+- Sub-headline: "We are building the rails for a borderless, zero-friction financial system."
+
+2. THE FOUNDER STORY
+---------------------------------
+- Visual: A high-quality, professional, greyscale photo of the founder.
+- Copy: The story of a 19-year-old developer from Jabalpur, India, who built the "Apna Coding" community and realized the need for a hyper-scalable, zero-gas L2 for emerging markets.
+
+3. TEAM SECTION
+---------------------------------
+- Layout: Grid of team member cards.
+- Card UI: Greyscale headshot, Name, Role, Twitter icon, LinkedIn icon.
+
+4. BACKED BY & PARTNERS
+---------------------------------
+- Visual: A clean grid of monochromatic logos representing VCs, Angels, and Tech Partners (e.g., Arbitrum, Celestia).
+
+5. PRESS & MEDIA
+---------------------------------
+- Layout: Links to articles and press mentions.
+- CTA Button: "Download Press Kit" (Provides a zip of all high-res B&W brand assets and logos).
+
+6. CONTACT & SOCIALS
+---------------------------------
+- Clean text links: Email, Twitter, Discord, Telegram.

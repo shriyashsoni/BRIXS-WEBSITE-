@@ -1,0 +1,43 @@
+================================================================================
+BRIXS CHAIN - DETAILED UI/UX PLAN: GRANTS (/grants)
+================================================================================
+PRIORITY: Must Have
+DESIGN THEME: Strictly Black & White.
+GOAL: Attract builders to deploy on Brixs by offering funding.
+
+1. GRANTS HERO SECTION
+---------------------------------
+- Headline: "Build the Future. Get Funded."
+- Sub-headline: "The Brixs Foundation is dedicating 25% of the token supply to accelerate ecosystem growth."
+- Primary CTA: "Apply Now" (Links to Typeform).
+
+2. GRANT TIERS (The Breakdown)
+---------------------------------
+- Layout: 4 Pricing-style Cards (side-by-side).
+- Tier 1: Micro ($500) - For hackathon winners and small tools.
+- Tier 2: Builder ($5K) - For MVPs and testnet deployments.
+- Tier 3: Growth ($25K) - For audited, mainnet-ready protocols.
+- Tier 4: Strategic ($100K+) - For massive infrastructure and liquidity provision.
+
+3. WHO CAN APPLY & WHAT WE FUND
+---------------------------------
+- Visual: Two columns.
+- Who: Individuals, Teams, Students, Open Source contributors.
+- What: DeFi, NFTs, Gaming, Infrastructure, Agentic Tooling.
+
+4. APPLICATION PROCESS (Step-by-Step)
+---------------------------------
+- Visual: A vertical timeline connecting 4 steps.
+- Step 1: Submit Application (5 mins).
+- Step 2: Foundation Review (1-2 weeks).
+- Step 3: Interview & Due Diligence.
+- Step 4: Milestone Agreement & Funding.
+
+5. PAST GRANT WINNERS (Social Proof)
+---------------------------------
+- Layout: Carousel of cards.
+- Details: Project Name, Logo, Amount Awarded, Brief description of what they built on Brixs.
+
+6. FAQ (Accordion)
+---------------------------------
+- Clean dropdown accordion for common questions (e.g., "Do I need to be doxxed?", "In what currency are grants paid?").
