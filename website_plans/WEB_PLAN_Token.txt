@@ -1,0 +1,50 @@
+================================================================================
+BRIXS CHAIN - DETAILED UI/UX PLAN: BRX TOKEN (/token)
+================================================================================
+PRIORITY: Must Have
+DESIGN THEME: Strictly Black & White.
+GOAL: Everything about the native BRX token — what it does, how many exist, and where to get it.
+
+1. TOKEN HERO SECTION
+---------------------------------
+- Visual: A massive, slowly rotating, hyper-realistic 3D render of the BRX coin (in sleek metallic silver/grey/black).
+- Headline: "$BRX"
+- Live Price Feed: Current price (e.g., "$1.24 USD").
+- Sub-headline: "The native fuel powering the Brixs ecosystem."
+- CTA Button: "Add BRX to MetaMask"
+
+2. LIVE STATS BAR
+---------------------------------
+- Total Supply: 1,000,000,000 BRX
+- Circulating Supply: Dynamic counter.
+- Market Cap: Dynamic counter.
+
+3. TOKEN UTILITY (What it does)
+---------------------------------
+- Layout: 4 feature cards.
+- Gas: "Used for native transaction fees across the ecosystem."
+- Governance: "Voting power for Brixs DAO proposals."
+- Staking: "Secure the network and earn yield."
+- Grants: "Fund the next generation of builders."
+
+4. TOKENOMICS PIE CHART
+---------------------------------
+- Visual: A highly interactive, sleek monochrome pie chart.
+- Breakdown:
+  - 30% Community Rewards & Airdrops
+  - 25% Ecosystem Growth & Grants
+  - 20% Core Contributors
+  - 15% Investors
+  - 10% Foundation Treasury
+
+5. VESTING SCHEDULE TABLE
+---------------------------------
+- Layout: A clean, minimal data table.
+- Columns: Cohort (Team, Investors, Community), Allocation %, Cliff, Vesting Duration.
+- Focus: High transparency.
+
+6. WHERE TO BUY (Exchanges)
+---------------------------------
+- Headline: "Trade BRX"
+- Layout: A grid of logos for DEXs (e.g., Uniswap) and CEXs (e.g., Binance, Bybit) where BRX is listed.
+- Each logo is a button linking directly to the trading pair.

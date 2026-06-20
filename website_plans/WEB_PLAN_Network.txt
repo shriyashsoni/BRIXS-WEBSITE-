@@ -1,0 +1,36 @@
+================================================================================
+BRIXS CHAIN - DETAILED UI/UX PLAN: NETWORK INFO (/network)
+================================================================================
+PRIORITY: Must Have
+DESIGN THEME: Strictly Black & White.
+GOAL: Single page with all network details for MetaMask, developers, and wallets. Most visited page by devs.
+
+1. NETWORK INFO HERO
+---------------------------------
+- Headline: "Connect to Brixs."
+- Sub-headline: "All the RPCs, Chain IDs, and configs you need to start building."
+
+2. MAINNET DETAILS TABLE
+---------------------------------
+- UI: A sleek table with "Copy" icons next to every single value.
+- Network Name: Brixs Mainnet [Copy Icon]
+- RPC URL: https://rpc.brixs.network [Copy Icon]
+- Chain ID: 12345 (placeholder) [Copy Icon]
+- Currency Symbol: BRX [Copy Icon]
+- Block Explorer URL: https://scan.brixs.network [Copy Icon]
+- CTA: Big solid button -> "Add Mainnet to MetaMask" (1-click Web3 interaction).
+
+3. TESTNET DETAILS TABLE
+---------------------------------
+- Exact same layout as above, but for Brixs Sepolia Testnet.
+- CTA: "Add Testnet to MetaMask".
+
+4. HARDHAT / FOUNDRY CONFIGS
+---------------------------------
+- UI: Code block snippets with syntax highlighting.
+- Content: Pre-written configuration objects for Hardhat (`hardhat.config.js`) and Foundry (`foundry.toml`) so developers can just copy-paste them into their projects.
+- "Copy Code" button on the top right of the code blocks.
+
+5. CHAINLIST INTEGRATION
+---------------------------------
+- A small badge/link proving the chain is verified and listed on Chainlist.org.

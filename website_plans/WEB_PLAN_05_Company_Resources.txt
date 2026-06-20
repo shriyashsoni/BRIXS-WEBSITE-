@@ -1,0 +1,41 @@
+================================================================================
+BRIXS CHAIN - WEBSITE DESIGN PLAN #5: COMPANY, TOKEN, & LEGAL
+================================================================================
+FOR THE UI/UX DESIGNER:
+- These pages need to feel highly institutional, compliant, and trustworthy.
+
+1. BRIXS TOKENOMICS PAGE
+---------------------------------
+Headline: "The Fuel for the Open Liquidity Stack."
+Visuals:
+- A massive, interactive Pie Chart (rendered in various shades of grey/white/black).
+- Allocation Breakdown:
+  - 30% Community Rewards & Airdrops.
+  - 25% Ecosystem Growth (Apna Coding Grants).
+  - 20% Core Contributors.
+  - 15% Investors.
+  - 10% Foundation Treasury.
+- Staking Calculator UI: "Stake BRIXS to secure the network -> Estimated APY %".
+
+2. AIRDROPS & QUESTS PORTAL
+---------------------------------
+UI: A gamified dashboard.
+Headline: "Secure the Network. Earn BRIXS."
+Checklist UI:
+- [ ] Bridge assets to Brixs Testnet.
+- [ ] Deploy a Smart Contract.
+- [ ] Execute 5 gasless transactions.
+Progress Bar: Shows how close the user is to claiming their airdrop.
+
+3. CAREERS & BRAND KIT
+---------------------------------
+Careers UI: Simple list of open roles (e.g., Rust Engineer, React Frontend Dev, DevRel).
+Brand Kit UI:
+- Downloadable Logos (SVG, PNG).
+- Color Hex Codes displayed: #000000 (Void Black), #FFFFFF (Pure White), #1A1A1A (Graphite).
+- Typography guidelines.
+
+4. LEGAL & PRIVACY
+---------------------------------
+UI: Standard, clean typography-focused pages. 
+A table of contents on the left, long scrolling text on the right. High contrast for readability.
