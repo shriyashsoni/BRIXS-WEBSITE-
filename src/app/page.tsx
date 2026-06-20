@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Fuel, Link as LinkIcon, Code2, Shield, Sparkles, Users, GitBranch, Rocket } from 'lucide-react';
 import Image from 'next/image';
+import AnimationFrameSequence from '@/components/AnimationFrameSequence';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -234,6 +235,146 @@ export default function Home() {
               <p className="text-gray-400">{step.desc}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* DEVELOPER EXPERIENCE - ANIMATED */}
+      <section className="py-32 px-6 max-w-7xl mx-auto border-t border-green-500/10">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-6">Deploy in Seconds</h2>
+            <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+              No new languages required. Build with the tools you already know. Brixs CLI streamlines deployment with zero complexity.
+            </p>
+            <div className="bg-black/80 border border-green-500/30 p-6 rounded-lg font-mono text-sm mb-6">
+              <div className="text-green-400">$ npm i -g @brixs/cli</div>
+              <div className="text-green-400 mt-2">$ brixs init my-dapp</div>
+              <div className="text-green-400 mt-2">$ brixs deploy --network mainnet</div>
+              <div className="text-white/60 mt-4">&gt; Deployment Successful!</div>
+              <div className="text-white/60">TX Hash: 0x7a2f8c...</div>
+            </div>
+            <button className="px-8 py-4 border border-green-500 text-green-500 hover:bg-green-500/10 transition-all">
+              Get Started
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-96 overflow-hidden rounded-lg border border-green-500/20"
+          >
+            <AnimationFrameSequence
+              prefix="abstract_dark_objects"
+              frameCount={120}
+              fps={24}
+              className="w-full h-full"
+            />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* NETWORK VISUALIZATION - ANIMATED */}
+      <section className="py-32 px-6 max-w-7xl mx-auto border-t border-green-500/10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-4">Infrastructure Scaled for Global Adoption</h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">High-throughput, low-latency network optimized for emerging markets worldwide.</p>
+        </motion.div>
+
+        <div className="relative w-full h-96 rounded-lg overflow-hidden border border-green-500/20 mb-8">
+          <AnimationFrameSequence
+            prefix="geometric_network_nodes"
+            frameCount={100}
+            fps={24}
+            className="w-full h-full"
+          />
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0 }}
+            className="p-6"
+          >
+            <div className="text-5xl font-black text-green-500 mb-2">10,000</div>
+            <div className="text-gray-400">TPS</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="p-6"
+          >
+            <div className="text-5xl font-black text-green-500 mb-2">&lt;0.01¢</div>
+            <div className="text-gray-400">Avg Fee</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="p-6"
+          >
+            <div className="text-5xl font-black text-green-500 mb-2">100%</div>
+            <div className="text-gray-400">EVM Compatible</div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MOLECULAR ARCHITECTURE - ANIMATED */}
+      <section className="py-32 px-6 max-w-7xl mx-auto border-t border-green-500/10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-4">Molecular-Precision Architecture</h2>
+          <p className="text-gray-400 text-lg">Every transaction is verified with sub-atomic precision.</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-96 rounded-lg overflow-hidden border border-green-500/20"
+          >
+            <AnimationFrameSequence
+              prefix="brixs_core_cube_cluster"
+              frameCount={150}
+              fps={20}
+              className="w-full h-full"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="space-y-6">
+              <div className="p-6 border border-green-500/20 hover:border-green-500/50 bg-green-500/5 rounded-lg transition-all">
+                <h3 className="text-xl font-bold mb-2">Unified Settlement Layer</h3>
+                <p className="text-gray-400">All transactions settle atomically across the network.</p>
+              </div>
+              <div className="p-6 border border-green-500/20 hover:border-green-500/50 bg-green-500/5 rounded-lg transition-all">
+                <h3 className="text-xl font-bold mb-2">Cross-Chain Orchestration</h3>
+                <p className="text-gray-400">Seamless interoperability with Ethereum and other L2s.</p>
+              </div>
+              <div className="p-6 border border-green-500/20 hover:border-green-500/50 bg-green-500/5 rounded-lg transition-all">
+                <h3 className="text-xl font-bold mb-2">AI Agent Ready</h3>
+                <p className="text-gray-400">Native support for autonomous on-chain agents and oracles.</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

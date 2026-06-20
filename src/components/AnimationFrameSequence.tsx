@@ -4,21 +4,23 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface AnimationFrameSequenceProps {
-  folderPath: string;
+  prefix: string;
   frameCount: number;
   fps?: number;
   className?: string;
   autoPlay?: boolean;
+  startFrame?: number;
 }
 
 export default function AnimationFrameSequence({
-  folderPath,
+  prefix,
   frameCount,
   fps = 24,
-  className = 'w-full h-auto',
+  className = 'w-full h-full',
   autoPlay = true,
+  startFrame = 0,
 }: AnimationFrameSequenceProps) {
-  const [currentFrame, setCurrentFrame] = useState(0);
+  const [currentFrame, setCurrentFrame] = useState(startFrame);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   useEffect(() => {
@@ -32,7 +34,7 @@ export default function AnimationFrameSequence({
   }, [isPlaying, frameCount, fps]);
 
   const frameNumber = String(currentFrame).padStart(4, '0');
-  const framePath = `${folderPath}/${folderPath.split('/').pop()}_${frameNumber}.webp`;
+  const framePath = `/animations/${prefix}_${frameNumber}.webp`;
 
   return (
     <div className={`relative ${className}`}>
@@ -42,6 +44,7 @@ export default function AnimationFrameSequence({
         fill
         className="object-contain"
         priority={currentFrame === 0}
+        unoptimized
       />
     </div>
   );
